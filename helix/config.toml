@@ -1,0 +1,5 @@
+[keys.normal]
+"A-ret" = ":pipe-to reple eval"
+
+[keys.select]
+"A-ret" = ":pipe-to reple eval"

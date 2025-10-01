@@ -1,0 +1,5 @@
+[[language]]
+name = "clojure"
+auto-format = true
+formatter = { command = "cljfmt", args = [ "fix", "-" ] }
+indent = { tab-width = 2, unit = "  " }
