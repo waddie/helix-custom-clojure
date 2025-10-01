@@ -6,9 +6,29 @@ This repo contains my customisations to make editing Clojure in Helix more comfo
 
 For textobject and indent queries:
 
-- Copy the Clojure language section from `./helix/languages.toml` into your own `~/.config/helix/languages.toml`
+- Copy the Clojure language section from `./helix/languages.toml` into your own `~/.config/helix/languages.toml`.
 - Copy `./helix/runtime/grammars/clojure.so` to your `~/.config/helix/runtime/grammars` folder.
 - Copy `./helix/runtime/queries/clojure/*.scm` to your `~/.config/helix/runtime/queries/clojure` folder.
+
+For ersatz repl integration:
+
+- Install reple from my fork at https://github.com/waddie/reple/tree/fix/rlwrap
+- Copy the keymap entries from `./helix/config.toml` to your own `~/.config/helix/config.toml`, or create your
+  own equivalents to suit your preferences.
+
+## reple
+
+Jeka’s `reple` (https://github.com/j3ka/reple) is a basic workaround for Helix’s current lack of a plugin
+system, which prevents a proper repl integration like CIDER for emacs or Calva for vscode. It lets you
+send a form to a repl to evaluated.
+
+`clj` wraps `clojure` in `rlwrap` to provide history, etc. When spawned with reple, it fails to launch
+because the terminal dimensions aren’t passed through. You can use plain `clojure`, but then you don’t get
+history. In practice, you will want to use the repl directly because the integration is so simple.
+
+My fork simply adds reporting of the terminal size so `clj` will start properly.
+
+To use it with the keymap included, simply select the entire form and hit Alt-Enter to send it to the repl.
 
 ## tree-sitter queries
 
