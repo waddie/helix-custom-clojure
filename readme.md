@@ -23,34 +23,34 @@ textobjects.scm enables the following:
 
 ### match inside/around function (mif/maf)
 
-**Inside**: Function body only, excluding keyword, name, and parameter vector
-**Around**: Entire form including opening/closing parens and keyword
+- **Inside**: Function body only, excluding keyword, name, and parameter vector
+- **Around**: Entire form including opening/closing parens and keyword
 
-**Supported keywords**:
-- `defn`, `defn-`, `defmacro`, `defmethod`, `defmulti`, `definline`
-- `fn`
-- `#()`
+- **Supported keywords**:
+  - `defn`, `defn-`, `defmacro`, `defmethod`, `defmulti`, `definline`
+  - `fn`
+  - `#()`
 
 ### match inside/around type (mit/mat)
 
-**Inside**: Everything after the type name
-**Around**: Entire form including opening/closing parens and keyword
+- **Inside**: Everything after the type name
+- **Around**: Entire form including opening/closing parens and keyword
 
-**Supported keywords**:
-- `deftype`, `defrecord`, `defprotocol`, `definterface`, `defstruct`
+- **Supported keywords**:
+  - `deftype`, `defrecord`, `defprotocol`, `definterface`, `defstruct`
 
 ### match inside/around test (miT/maT)
 
-**Inside**: Everything after the test name
-**Around**: Entire form including opening/closing parens and keyword
+- **Inside**: Everything after the test name
+- **Around**: Entire form including opening/closing parens and keyword
 
-**Supported keywords**:
-- `deftest`
+- **Supported keywords**:
+  - `deftest`
 
 ### match inside/around parameter (mia/maa)
 
-**Inside**: All parameters within the vector, excluding brackets
-**Around**: Entire parameter vector including brackets
+- **Inside**: All parameters within the vector, excluding brackets
+- **Around**: Entire parameter vector including brackets
 
 **Note**: Works the same with any vec.
 
@@ -58,28 +58,28 @@ textobjects.scm enables the following:
 
 For lists, vectors and sets:
 
-**Around**/**Inside**: Individual elements within collections
+- **Around**/**Inside**: Individual elements within collections
 
 For maps:
 
-**Inside**: Key or value
-**Around**: Key/value pair
+- **Inside**: Key or value
+- **Around**: Key/value pair
 
-**Supported collections**:
-- Lists: `(a b c)`
-- Vectors: `[a b c]`
-- Maps: `{:a 1 :b 2}`
-- Sets: `#{a b c}`
+- **Supported collections**:
+  - Lists: `(a b c)`
+  - Vectors: `[a b c]`
+  - Maps: `{:a 1 :b 2}`
+  - Sets: `#{a b c}`
 
 ### Match inside/around Comment (mic/mac)
 
-**Inside**: Comment content excluding delimiters
-**Around**: Entire comment form or consecutive comment lines
+- **Inside**: Comment content excluding delimiters
+- **Around**: Entire comment form or consecutive comment lines
 
-**Supported forms**:
-- Line comments: `; comment`
-- Discard expressions: `#_(+ 1 2)`
-- Comment special form: `(comment ...)`
+- **Supported forms**:
+  - Line comments: `; comment`
+  - Discard expressions: `#_(+ 1 2)`
+  - Comment special form: `(comment ...)`
 
 indents.scm enables the following:
 
@@ -88,7 +88,7 @@ indents.scm enables the following:
 Forms where the body is indented after the name/bindings:
 
 - **Definitions**: `def`, `defn`, `defn-`, `defmacro`, `defmethod`, `defmulti`, `defonce`,
-  `defprotocol`, `deftype`, `defrecord`, `defstruct`, `definline`, `definterface`, `deftest`
+`defprotocol`, `deftype`, `defrecord`, `defstruct`, `definline`, `definterface`, `deftest`
 - **Namespace**: `ns`
 - **Bindings**: `let`, `letfn`, `binding`, `loop`
 - **Iteration**: `for`, `doseq`, `dotimes`
