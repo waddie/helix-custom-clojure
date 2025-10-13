@@ -4,9 +4,6 @@
   (sym_lit) @_keyword
   .
   (sym_lit)
-  .
-  (vec_lit)
-  .
   (_)* @function.inside
   (#match? @_keyword "^(defn|defn-|defmacro|defmethod|defmulti|definline)$")) @function.around
 
@@ -14,9 +11,6 @@
 (list_lit
   .
   (sym_lit) @_fn
-  .
-  (vec_lit)
-  .
   (_)* @function.inside
   (#match? @_fn "^fn$")) @function.around
 
@@ -30,7 +24,6 @@
   (sym_lit) @_keyword
   .
   (sym_lit)
-  .
   (_)* @class.inside
   (#match? @_keyword "^(deftype|defrecord|defprotocol|definterface|defstruct)$")) @class.around
 
@@ -40,7 +33,6 @@
   (sym_lit) @_keyword
   .
   (sym_lit)
-  .
   (_)* @test.inside
   (#match? @_keyword "^deftest$")) @test.around
 
@@ -79,6 +71,5 @@
 (list_lit
   .
   (sym_lit) @_comment
-  .
   (_)* @comment.inside
   (#match? @_comment "^comment$")) @comment.around
