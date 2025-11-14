@@ -1,3 +1,7 @@
+# ARCHIVED
+
+My text object and indent queries are [now merged](https://github.com/helix-editor/helix/commit/f3fef10751d3e78e84bd048fce9129b86616c523) to mainline Helix, and I have a reasonably fully-featured [nREPL client](https://github.com/waddie/nrepl.hx) for the [Steel plugin system](https://github.com/mattwparas/helix/tree/steel-event-system), so this repo is now redundant.
+
 # Custom Clojure Queries for Helix Editor
 
 This repo contains my customisations to make editing Clojure in Helix more comfortable.
